@@ -1,0 +1,328 @@
+/* =========================
+   ABOUT SECTION - ENHANCED
+   ========================= */
+
+/* =========================
+   COLOR VARIABLES
+   ========================= */
+
+/* Dark Mode (Default) */
+:root {
+  --bg-color: #0f0f0f; /* deep charcoal background */
+  --text-color: #f8f9fa;
+
+  /* Carousel */
+  --carousel-bg: rgba(20, 20, 20, 0.8);
+  --btn-bg: #f0c674; /* gold buttons */
+  --btn-text: #0f0f0f;
+  --btn-hover: #ffd98e; /* lighter gold on hover */
+  --dot-inactive: #555;
+  --dot-active: #f0c674;
+
+  /* Features */
+  --feature-border: rgba(240, 198, 116, 0.25);
+  --feature-title-bg: rgba(240, 198, 116, 0.12);
+  --feature-title-border: rgba(240, 198, 116, 0.25);
+  --feature-title-color: #f0c674;
+  --feature-title-hover: rgba(240, 198, 116, 0.2);
+  --feature-desc-bg: rgba(27, 27, 27, 0.5);
+  --feature-desc-border: rgba(240, 198, 116, 0.4);
+  --feature-text: #f8f9fa;
+
+  /* About Section Colors */
+  --about-bg: rgba(27, 27, 27, 0.6);
+  --about-border: rgba(240, 198, 116, 0.25);
+  --about-title: #f0c674;
+  --about-title-shadow: rgba(240, 198, 116, 0.15);
+  --about-text: #f8f9fa;
+  --about-highlight: #f0c674;
+}
+
+/* Light Mode */
+.light-mode {
+  --bg-color: #f5f7fa;
+  --text-color: #1a1a1a;
+
+  /* Carousel */
+  --carousel-bg: rgba(100, 181, 246, 0.05);
+  --btn-bg: #64b5f6;
+  --btn-text: #fff;
+  --btn-hover: #42a5f5;
+  --dot-inactive: #bbdefb;
+  --dot-active: #1565c0;
+
+  /* Features */
+  --feature-border: #ddd;
+  --feature-title-bg: #e3f2fd;
+  --feature-title-border: #64b5f6;
+  --feature-title-color: #1565c0;
+  --feature-title-hover: #ffffff;
+  --feature-desc-bg: #ffffff;
+  --feature-desc-border: #64b5f6;
+  --feature-text: #1a1a1a;
+
+  /* About Section Colors */
+  --about-bg: rgba(100, 181, 246, 0.05);
+  --about-border: rgba(0, 174, 239, 0.15);
+  --about-title: #1565c0;
+  --about-title-shadow: rgba(21, 101, 192, 0.15);
+  --about-text: #1a1a1a;
+  --about-highlight: #1565c0;
+}
+
+/* =========================
+   ABOUT SECTION BASE
+   ========================= */
+#about {
+  text-align: center;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: var(--about-bg);
+  color: var(--about-text);
+  box-shadow: 0 4px 12px var(--about-border);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  animation: fadeIn 0.6s ease-out;
+}
+
+#about .section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--about-title);
+  text-shadow: 0 2px 6px var(--about-title-shadow);
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 0.5rem;
+}
+
+#about p {
+  color: var(--about-text);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#about p strong {
+  color: var(--about-highlight);
+}
+
+/* =========================
+   SUMMARY HEADER
+   ========================= */
+.summary-head {
+  font-size: 1.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  cursor: pointer;
+  margin: 1.5rem 0 1rem 0;
+  font-weight: 700;
+  padding: 0.6rem 1rem;
+  border-radius: 8px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+  background-color: var(--feature-title-bg);
+  color: var(--feature-title-color);
+}
+
+.summary-head::after {
+  content: "";
+  position: absolute;
+  left: 1rem;
+  bottom: 0;
+  width: 0%;
+  height: 3px;
+  background-color: currentColor;
+  transition: width 0.3s ease;
+}
+
+.summary-head:hover::after {
+  width: calc(100% - 2rem);
+}
+
+.summary-head:hover {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 1.2rem;
+}
+
+.summary-head.active .arrow {
+  transform: rotate(90deg);
+}
+
+/* =========================
+   SUMMARY TEXT
+   ========================= */
+.summary-text {
+  padding: 1rem 1.2rem;
+  border-radius: 10px;
+  margin-bottom: 1.5rem;
+  font-size: 1rem;
+  line-height: 1.6;
+  background: var(--feature-desc-bg);
+  border-left: 4px solid var(--feature-desc-border);
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.08);
+  animation: fadeInSummary 0.4s ease;
+}
+
+/* =========================
+   IMAGE CAROUSEL
+   ========================= */
+.page-carousel-wrapper {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 6.5 / 10.075;
+  border-radius: 10px;
+  overflow: hidden;
+  background: var(--carousel-bg);
+  animation: fadeIn 0.8s ease-out;
+  box-shadow: 0 0 12px rgba(0, 198, 255, 0.15);
+}
+
+.page-carousel {
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+  height: 100%;
+}
+
+.page-carousel img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  flex-shrink: 0;
+  border-radius: 8px;
+  animation: slideIn 0.5s ease-out;
+}
+
+.page-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  border: none;
+  font-size: 1.5rem;
+  padding: 0.4rem 0.8rem;
+  cursor: pointer;
+  z-index: 2;
+  border-radius: 6px;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.page-btn:hover {
+  background: var(--btn-hover);
+  transform: scale(1.05);
+}
+
+.page-btn.left { left: 8px; }
+.page-btn.right { right: 8px; }
+
+.page-dots {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.page-dots .dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: var(--dot-inactive);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+
+.page-dots .dot.active {
+  background-color: var(--dot-active);
+}
+
+/* =========================
+   FEATURES
+   ========================= */
+#features {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.feature-item {
+  border-bottom: 1px solid var(--feature-border);
+  padding: 0.75rem 0;
+}
+
+.feature-title {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  font-size: 1.2rem;
+  cursor: pointer;
+  background: var(--feature-title-bg);
+  border: 1px solid var(--feature-title-border);
+  color: var(--feature-title-color);
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.feature-title:hover {
+  background-color: var(--feature-title-hover);
+  transform: translateX(3px);
+}
+
+.feature-description {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  max-height: 0;
+  overflow: hidden;
+  opacity: 0;
+  transition: max-height 0.5s ease, opacity 0.5s ease, padding 0.3s ease;
+  padding: 0 1rem;
+  border-radius: 0 0 8px 8px;
+  background-color: var(--feature-desc-bg);
+  border-left: 4px solid var(--feature-desc-border);
+}
+
+.feature-item.expanded .feature-description {
+  max-height: 400px;
+  opacity: 1;
+  padding: 1rem;
+}
+
+.feature-description img {
+  max-width: 160px;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 6px;
+}
+
+.feature-description p {
+  flex: 1;
+  margin: 0;
+  font-size: 0.95rem;
+  color: var(--feature-text);
+}
+
+/* =========================
+   ANIMATIONS
+   ========================= */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeInSummary {
+  from { opacity: 0; transform: translateY(-4px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes slideIn {
+  from { opacity: 0; transform: translateX(10px); }
+  to { opacity: 1; transform: translateX(0); }
+}

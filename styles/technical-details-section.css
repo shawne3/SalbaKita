@@ -1,0 +1,124 @@
+/* =========================
+   TECHNICAL DETAILS SECTION
+   ========================= */
+#technical_details {
+  text-align: center;
+  padding: 2rem;
+  background: var(--tech-bg);
+  border-radius: 16px;
+  max-width: 480px; /* Same as About section */
+  margin: 0 auto; /* Centered horizontally */
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--tech-border);
+  transition: background-color 0.4s ease, color 0.4s ease;
+}
+
+/* Section title inside container */
+#technical_details .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--tech-title);
+  text-shadow: 0 2px 8px rgba(255, 214, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+/* List wrapper */
+#technical_details .neon-list {
+  margin-top: 2rem;
+}
+
+/* Grid layout */
+#technical_details ul {
+  list-style: none;
+  padding-left: 0;
+  display: grid;
+  grid-template-columns: 1fr; /* Mobile first */
+  gap: 1.2rem;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+/* TECH ITEM CARD */
+.tech-item {
+  background: var(--tech-card-bg);
+  box-shadow: 0 4px 12px var(--tech-card-shadow);
+  border-radius: 12px;
+  overflow: hidden;
+  transition: transform 0.3s ease, background 0.3s ease;
+  border: 1px solid var(--tech-card-border);
+}
+
+/* Hover scaling */
+.tech-item:hover {
+  transform: scale(1.02);
+  background: var(--tech-card-hover);
+}
+
+/* HEADER */
+.tech-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.2rem;
+  font-weight: bold;
+  cursor: pointer;
+  position: relative;
+  font-size: 1.05rem;
+  color: var(--tech-header-color);
+}
+
+/* Arrow rotation animation */
+.arrow {
+  transition: transform 0.3s ease;
+}
+
+.tech-item.active .arrow {
+  transform: rotate(90deg);
+}
+
+/* DESCRIPTION (HIDDEN) */
+.tech-desc {
+  max-height: 0;
+  overflow: hidden;
+  padding: 0 1.2rem;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  background: var(--tech-desc-bg);
+  transition: max-height 0.4s ease, padding 0.4s ease;
+}
+
+/* Expanded state */
+.tech-item.active .tech-desc {
+  max-height: 300px; /* large enough for most text */
+  padding: 1rem 1.2rem;
+}
+
+/* =========================
+   COLOR SCHEME VARIABLES
+   ========================= */
+
+/* Light Mode */
+.light-mode #technical_details {
+  --tech-bg: #ffffff;
+  --tech-border: #e6e6e6;
+  --tech-title: #1565c0;
+  --tech-card-bg: rgba(100, 181, 246, 0.12);
+  --tech-card-hover: rgba(100, 181, 246, 0.2);
+  --tech-card-border: rgba(100, 181, 246, 0.25);
+  --tech-card-shadow: rgba(0, 174, 239, 0.12);
+  --tech-header-color: #1565c0;
+  --tech-desc-bg: rgba(255, 255, 255, 0.5);
+}
+
+/* Dark Mode */
+:root {
+  --tech-bg: #121212;
+  --tech-border: #2a2a2a;
+  --tech-title: #f0c674;
+  --tech-card-bg: rgba(240, 198, 116, 0.12);
+  --tech-card-hover: rgba(240, 198, 116, 0.2);
+  --tech-card-border: rgba(240, 198, 116, 0.25);
+  --tech-card-shadow: rgba(240, 198, 116, 0.08);
+  --tech-header-color: #f0c674;
+  --tech-desc-bg: rgba(27, 27, 27, 0.5);
+}

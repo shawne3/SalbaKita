@@ -1,0 +1,120 @@
+/* ===================
+   CONTACT SECTION
+   =================== */
+#contact {
+  text-align: center;
+  padding: 2rem;
+  background: var(--contact-bg);
+  border-radius: 16px;
+  max-width: 480px; /* Matches About/Tech/Demo container width */
+  margin: 0 auto;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  border: 1px solid var(--contact-border);
+  transition: background-color 0.4s ease, color 0.4s ease;
+  margin-bottom: 1rem; /* Space below the section */
+  margin-top: 1rem;
+}
+
+/* Contact Section Title */
+#contact .section-title {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: var(--contact-title);
+  text-shadow: 0 2px 8px rgba(255, 214, 0, 0.15);
+  margin-bottom: 1.5rem;
+}
+
+/* Contact Form */
+form#contactForm {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  max-width: 480px; /* Restrict form width */
+  margin: 0 auto;
+}
+
+/* Input & Textarea */
+form input,
+form textarea {
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  border: 1px solid var(--contact-input-border);
+  font-size: 1rem;
+  background: var(--contact-input-bg);
+  color: var(--contact-input-color);
+  resize: none;
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+/* Placeholder Text */
+form input::placeholder,
+form textarea::placeholder {
+  color: var(--contact-placeholder);
+}
+
+/* Input Focus Effect */
+form input:focus,
+form textarea:focus {
+  outline: none;
+  border-color: var(--contact-input-focus);
+  box-shadow: 0 0 8px var(--contact-input-focus-shadow);
+}
+
+/* Submit Button */
+form button {
+  align-self: flex-start;
+  background: var(--contact-btn-bg);
+  color: var(--contact-btn-color);
+  padding: 0.8rem 1.4rem;
+  border: none;
+  border-radius: 8px;
+  font-size: 1rem;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+  background: var(--contact-btn-hover);
+  transform: scale(1.03);
+}
+
+/* =========================
+   COLOR SCHEME VARIABLES
+   ========================= */
+
+/* Light Mode */
+.light-mode #contact {
+  --contact-bg: #ffffff;
+  --contact-border: #e6e6e6;
+  --contact-title: #1565c0;
+
+  --contact-input-bg: rgba(100, 181, 246, 0.05);
+  --contact-input-border: rgba(100, 181, 246, 0.25);
+  --contact-input-color: #000;
+  --contact-placeholder: #666;
+  --contact-input-focus: #1565c0;
+  --contact-input-focus-shadow: rgba(21, 101, 192, 0.4);
+
+  --contact-btn-bg: #1565c0;
+  --contact-btn-color: #fff;
+  --contact-btn-hover: #0d47a1;
+}
+
+/* Dark Mode */
+:root {
+  --contact-bg: #121212;
+  --contact-border: #2a2a2a;
+  --contact-title: #f0c674;
+
+  --contact-input-bg: rgba(240, 198, 116, 0.05);
+  --contact-input-border: rgba(240, 198, 116, 0.25);
+  --contact-input-color: #fff;
+  --contact-placeholder: #aaa;
+  --contact-input-focus: #f0c674;
+  --contact-input-focus-shadow: rgba(240, 198, 116, 0.4);
+
+  --contact-btn-bg: #f0c674;
+  --contact-btn-color: #232323;
+  --contact-btn-hover: #d6ac4c;
+}

@@ -1,0 +1,219 @@
+/* ===============================
+   VARIABLES (Dark Mode)
+   =============================== */
+:root {
+  --bg-color: #0f0f0f; /* deep charcoal background */
+  --text-color: #f8f9fa;
+
+  /* Carousel */
+  --carousel-bg: rgba(20, 20, 20, 0.8);
+  --btn-bg: #f0c674; /* gold buttons */
+  --btn-text: #0f0f0f;
+  --btn-hover: #ffd98e; /* lighter gold on hover */
+  --dot-inactive: #555;
+  --dot-active: #f0c674;
+
+  /* Features */
+  --feature-border: rgba(240, 198, 116, 0.25);
+  --feature-title-bg: rgba(240, 198, 116, 0.12);
+  --feature-title-border: rgba(240, 198, 116, 0.25);
+  --feature-title-color: #f0c674;
+  --feature-title-hover: rgba(240, 198, 116, 0.2);
+  --feature-desc-bg: rgba(27, 27, 27, 0.5);
+  --feature-desc-border: rgba(240, 198, 116, 0.4);
+  --feature-text: #f8f9fa;
+
+  /* About Section Colors */
+  --about-bg: rgba(27, 27, 27, 0.6);
+  --about-border: rgba(240, 198, 116, 0.25);
+  --about-title: #f0c674;
+  --about-title-shadow: rgba(240, 198, 116, 0.15);
+  --about-text: #f8f9fa;
+  --about-highlight: #f0c674;
+
+  /* Section-specific */
+  --section-bg: rgba(27, 27, 27, 0.9);
+  --section-border: rgba(240, 198, 116, 0.2);
+}
+
+/* Light Mode Variables Override */
+.light-mode {
+  --bg-color: linear-gradient(180deg, #e3f7ff 0%, #f5faff 100%);
+  --text-color: #002b36;
+
+  --btn-bg: #00AEEF;
+  --btn-text: #ffffff;
+  --btn-hover: #33cfff;
+
+  --feature-border: rgba(0, 174, 239, 0.2);
+  --feature-title-bg: rgba(0, 174, 239, 0.08);
+  --feature-title-border: rgba(0, 174, 239, 0.2);
+  --feature-title-color: #00AEEF;
+  --feature-title-hover: rgba(0, 174, 239, 0.12);
+  --feature-desc-bg: rgba(255, 255, 255, 0.6);
+  --feature-desc-border: rgba(0, 174, 239, 0.25);
+  --feature-text: #003547;
+
+  --about-bg: rgba(255, 255, 255, 0.7);
+  --about-border: rgba(0, 174, 239, 0.25);
+  --about-title: #00AEEF;
+  --about-title-shadow: rgba(0, 174, 239, 0.15);
+  --about-text: #003547;
+  --about-highlight: #00AEEF;
+
+  --section-bg: rgba(255, 255, 255, 0.9);
+  --section-border: rgba(0, 174, 239, 0.15);
+}
+
+/* ===============================
+   RESET & BASE
+   =============================== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  scroll-behavior: smooth;
+}
+
+body {
+  background: var(--bg-color);
+  color: var(--text-color);
+  line-height: 1.6;
+  font-size: 16px;
+  overflow-x: hidden;
+}
+
+@media (max-width: 768px) {
+  body {
+    font-size: 14px;
+  }
+}
+
+/* ===============================
+   CONTAINER (MOBILE MAX WIDTH)
+   =============================== */
+.container {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1rem;
+}
+
+/* ===============================
+   MODE TOGGLE BUTTON
+   =============================== */
+.mode-toggle {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 2rem;
+  z-index: 2000;
+  background: var(--btn-bg);
+  color: var(--btn-text);
+  border: none;
+  border-radius: 20px;
+  padding: 0.6rem 1.3rem;
+  font-size: 0.94rem;
+  font-weight: 600;
+  box-shadow: 0 2px 12px rgba(240, 198, 116, 0.3);
+  cursor: pointer;
+  transition: background 0.3s, color 0.3s, transform 0.2s;
+}
+
+.mode-toggle:hover,
+.mode-toggle:focus {
+  background: var(--btn-hover);
+  color: var(--btn-text);
+  outline: 2px solid var(--btn-bg);
+  transform: translateY(-2px);
+}
+
+/* ===============================
+   HEADER & NAV
+   =============================== */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background-color: rgba(15, 15, 15, 0.85);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--feature-border);
+}
+
+.site-header h1 {
+  font-size: 1.6rem;
+  font-weight: bold;
+  color: var(--feature-title-color);
+}
+
+.site-nav a {
+  color: var(--feature-title-color);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s;
+}
+
+.site-nav a:hover {
+  color: var(--btn-hover);
+}
+
+/* ===============================
+   SECTION TITLE
+   =============================== */
+.section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  text-align: left;
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  color: var(--feature-title-color);
+  text-shadow: 0 2px 6px var(--about-title-shadow);
+}
+
+/* ===============================
+   CAMERA & SENSORS SECTION
+   =============================== */
+#camera-section,
+#sensors-section {
+  background: var(--section-bg);
+  border: 1px solid var(--section-border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.camera-feed {
+  background: #000;
+  border-radius: 8px;
+  height: 220px;
+  display: flex;
+  justify-content: center;
+  align-items: center;  
+  color: #ccc;
+  font-size: 0.9rem;
+}
+
+.sensor-list {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.sensor-card {
+  background: var(--feature-desc-bg);
+  border: 1px solid var(--feature-desc-border);
+  border-radius: 8px;
+  padding: 0.8rem;
+  color: var(--feature-text);
+  transition: background 0.3s, transform 0.2s;
+}
+
+.sensor-card:hover {
+  background: var(--feature-title-hover);
+  transform: translateY(-1px);
+}
