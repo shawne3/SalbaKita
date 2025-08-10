@@ -3,65 +3,62 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About | BreatheEasy</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="/styles/monitor.css" />
+  <title>SalbaKita Monitor Panel</title>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+  <link rel="stylesheet" href="/styles/monitor.css" />
 </head>
 <body>
+  <!-- Light/Dark mode toggle button -->
+  <button class="mode-toggle" id="modeToggle" aria-label="Toggle light/dark mode">Light Mode</button>
 
-  <header class="site-header">
-    <h1>SalbaKita Monitor Panel</h1>
-  </header>
+  <!-- Loader screen -->
+  <div class="loader-screen">
+    <h1 class="loader-text">Loading Monitor Panel...</h1>
+  </div>
 
-  <nav class="site-nav">
-    <a href="index.html">Back To Home</a>
-  </nav>
+  <!-- Header -->
+  <div class="monitor-header-container">
+    <header class="site-header glassy-panel">
+      <h1 class="main-hero">SalbaKita Monitor Panel</h1>
+      <nav class="site-nav">
+        <a href="index.html">Back To Home</a>
+      </nav>
+    </header>
+  </div>
 
-    <section>
-      <h2>Monitor Panel</h2>
-      <p>This will display the results</p>
-
-      <!-- Camera Container -->
-      <div id="camera-section">
-        <h3 class="section-title">Live Camera Feed</h3>
-        <div class="camera-feed">
-          Live Camera Feed Placeholder
-        </div>
-      </div>
-
-      <!-- Sensor Container -->
-      <div id="sensors-section">
-        <h3 class="section-title">Sensor Readings</h3>
-        <div class="sensor-list">
-          <div class="sensor-card">
-            <h3>Sensor 1: Temperature</h3>
-            <p>-- °C</p>
-          </div>
-          <div class="sensor-card">
-            <h3>Sensor 2: Humidity</h3>
-            <p>-- %</p>
-          </div>
-          <div class="sensor-card">
-            <h3>Sensor 3: Air Quality (PM2.5)</h3>
-            <p>-- µg/m³</p>
-          </div>
-          <div class="sensor-card">
-            <h3>Sensor 4: CO₂ Level</h3>
-            <p>-- ppm</p>
-          </div>
-          <div class="sensor-card">
-            <h3>Sensor 5: Smoke Detection</h3>
-            <p>Status: --</p>
-          </div>
-        </div>
+  <main>
+    <section class="hero glassy-panel fade-in">
+      <h1 class="robotic-title">Live Camera Feed</h1>
+      <div class="camera-feed">
+        <img id="liveCamera" src="" alt="Live Camera" width="640" height="480" />
       </div>
     </section>
+  </main>
 
-  <footer class="site-footer">
+  <footer class="site-footer glassy-panel">
     <p>&copy; 2025 Labas Senior High School | All Rights Reserved</p>
   </footer>
 
-  <script src="script.js"></script>
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+  <script>
+    // Mode toggle
+    const modeToggle = document.getElementById("modeToggle");
+    modeToggle.addEventListener("click", () => {
+      document.body.classList.toggle("light-mode");
+      modeToggle.textContent = document.body.classList.contains("light-mode") ? "Dark Mode" : "Light Mode";
+    });
+
+    // Loader and animations
+    window.addEventListener("DOMContentLoaded", () => {
+      setTimeout(() => {
+        document.querySelector(".loader-screen").style.display = "none";
+      }, 1200);
+
+      gsap.from(".main-hero", { opacity: 0, y: -40, duration: 1 });
+      gsap.from(".robotic-title", { opacity: 0, y: 20, duration: 0.7, delay: 0.3 });
+      gsap.from(".camera-feed", { opacity: 0, y: 20, duration: 0.8, delay: 0.5 });
+    });
+  </script>
 </body>
 </html>

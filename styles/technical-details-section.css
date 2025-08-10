@@ -3,39 +3,33 @@
    ========================= */
 #technical_details {
   text-align: center;
-  padding: 2rem;
-  background: var(--tech-bg);
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 1.5rem;
   border-radius: 16px;
-  max-width: 480px; /* Same as About section */
-  margin: 0 auto; /* Centered horizontally */
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--tech-border);
+  background-color: var(--tech-bg);
+  color: var(--tech-text);
+  box-shadow: 0 4px 12px var(--tech-border);
   transition: background-color 0.4s ease, color 0.4s ease;
+  animation: fadeIn 0.6s ease-out;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Section title inside container */
 #technical_details .section-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--tech-title);
-  text-shadow: 0 2px 8px rgba(255, 214, 0, 0.15);
-  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 6px var(--tech-title-shadow);
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 0.5rem;
 }
 
 /* List wrapper */
 #technical_details .neon-list {
   margin-top: 2rem;
-}
-
-/* Grid layout */
-#technical_details ul {
-  list-style: none;
-  padding-left: 0;
-  display: grid;
-  grid-template-columns: 1fr; /* Mobile first */
-  gap: 1.2rem;
-  max-width: 700px;
-  margin: 0 auto;
 }
 
 /* TECH ITEM CARD */
@@ -46,6 +40,8 @@
   overflow: hidden;
   transition: transform 0.3s ease, background 0.3s ease;
   border: 1px solid var(--tech-card-border);
+  margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
 /* Hover scaling */
@@ -76,7 +72,7 @@
   transform: rotate(90deg);
 }
 
-/* DESCRIPTION (HIDDEN) */
+/* DESCRIPTION (HIDDEN BY DEFAULT) */
 .tech-desc {
   max-height: 0;
   overflow: hidden;
@@ -85,12 +81,38 @@
   line-height: 1.5;
   background: var(--tech-desc-bg);
   transition: max-height 0.4s ease, padding 0.4s ease;
+  text-indent: 1.5em;
+  text-align: justify;
 }
 
 /* Expanded state */
 .tech-item.active .tech-desc {
-  max-height: 300px; /* large enough for most text */
+  max-height: 1000px;
   padding: 1rem 1.2rem;
+}
+
+.tech-desc p {
+  margin-bottom: 0.8rem;
+}
+
+/* Internal unordered list styling */
+.tech-desc ul {
+  list-style-type: disc;
+  padding-left: 1.5rem;
+  margin: 0.8rem 0 0;
+  text-align: left;
+}
+
+.tech-desc li {
+  margin-bottom: 0.4rem;
+  line-height: 1.6;
+}
+
+/* GRID LAYOUT */
+#technical_details ul {
+  list-style: none;
+  padding-left: 0;
+  margin: 0;
 }
 
 /* =========================
@@ -99,9 +121,11 @@
 
 /* Light Mode */
 .light-mode #technical_details {
-  --tech-bg: #ffffff;
-  --tech-border: #e6e6e6;
+  --tech-bg: rgba(100, 181, 246, 0.05);
+  --tech-text: #1a1a1a;
+  --tech-border: rgba(0, 174, 239, 0.15);
   --tech-title: #1565c0;
+  --tech-title-shadow: rgba(21, 101, 192, 0.15);
   --tech-card-bg: rgba(100, 181, 246, 0.12);
   --tech-card-hover: rgba(100, 181, 246, 0.2);
   --tech-card-border: rgba(100, 181, 246, 0.25);
@@ -112,9 +136,11 @@
 
 /* Dark Mode */
 :root {
-  --tech-bg: #121212;
-  --tech-border: #2a2a2a;
+  --tech-bg: rgba(27, 27, 27, 0.6);
+  --tech-text: #f8f9fa;
+  --tech-border: rgba(240, 198, 116, 0.25);
   --tech-title: #f0c674;
+  --tech-title-shadow: rgba(240, 198, 116, 0.15);
   --tech-card-bg: rgba(240, 198, 116, 0.12);
   --tech-card-hover: rgba(240, 198, 116, 0.2);
   --tech-card-border: rgba(240, 198, 116, 0.25);

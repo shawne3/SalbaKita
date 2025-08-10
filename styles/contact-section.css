@@ -1,120 +1,184 @@
-/* ===================
-   CONTACT SECTION
-   =================== */
+/* =========================
+   CONTACT US! - EMERGENCY HOTLINES
+   ========================= */
 #contact {
   text-align: center;
+  max-width: 480px;
+  margin: 2rem auto;
   padding: 2rem;
-  background: var(--contact-bg);
-  border-radius: 16px;
-  max-width: 480px; /* Matches About/Tech/Demo container width */
-  margin: 0 auto;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--contact-border);
+  border-radius: 20px;
+  background: var(--about-bg);
+  color: var(--about-text);
+  box-shadow: 0 8px 20px var(--about-border);
   transition: background-color 0.4s ease, color 0.4s ease;
-  margin-bottom: 1rem; /* Space below the section */
+  animation: fadeIn 0.6s ease-out;
+}
+
+/* Section Title */
+#contact .section-title {
+  font-size: 2.4rem;
+  font-weight: 800;
+  color: var(--about-title);
+  text-shadow: 0 2px 8px var(--about-title-shadow);
+  margin-bottom: 1.5rem;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+/* Email Link */
+#contact .email-link {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-bottom: 1.5rem;
+  padding-bottom: 2px;
+  color: var(--about-highlight);
+  text-decoration: none;
+  border-bottom: 2px solid var(--about-highlight);
+  transition: color 0.3s ease, border-color 0.3s ease;
+}
+
+#contact .email-link:hover {
+  color: var(--feature-title-hover);
+  border-color: var(--feature-title-hover);
+}
+
+/* Contact Info List */
+#contact .contact-info {
+  text-align: left;
   margin-top: 1rem;
 }
 
-/* Contact Section Title */
-#contact .section-title {
-  font-size: 2.2rem;
-  font-weight: 700;
-  color: var(--contact-title);
-  text-shadow: 0 2px 8px rgba(255, 214, 0, 0.15);
-  margin-bottom: 1.5rem;
+#contact .contact-info ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
 }
 
-/* Contact Form */
-form#contactForm {
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  max-width: 480px; /* Restrict form width */
-  margin: 0 auto;
+#contact .contact-info li {
+  background: var(--feature-desc-bg);
+  border: 1px solid var(--feature-desc-border);
+  border-radius: 12px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+  transition: transform 0.2s ease, box-shadow 0.3s ease;
 }
 
-/* Input & Textarea */
-form input,
-form textarea {
-  padding: 0.8rem 1rem;
-  border-radius: 8px;
-  border: 1px solid var(--contact-input-border);
-  font-size: 1rem;
-  background: var(--contact-input-bg);
-  color: var(--contact-input-color);
-  resize: none;
-  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+#contact .contact-info li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 14px rgba(0,0,0,0.2);
 }
 
-/* Placeholder Text */
-form input::placeholder,
-form textarea::placeholder {
-  color: var(--contact-placeholder);
+/* Contact Name */
+#contact .contact-info strong {
+  display: block;
+  margin-bottom: 0.4rem;
+  font-size: 1.1rem;
+  color: var(--feature-title-color);
 }
 
-/* Input Focus Effect */
-form input:focus,
-form textarea:focus {
-  outline: none;
-  border-color: var(--contact-input-focus);
-  box-shadow: 0 0 8px var(--contact-input-focus-shadow);
-}
-
-/* Submit Button */
-form button {
-  align-self: flex-start;
-  background: var(--contact-btn-bg);
-  color: var(--contact-btn-color);
-  padding: 0.8rem 1.4rem;
-  border: none;
-  border-radius: 8px;
-  font-size: 1rem;
-  font-weight: bold;
-  cursor: pointer;
+/* Phone Links */
+#contact .contact-info a {
+  font-size: 1.1rem;
+  font-weight: 600;
+  display: inline-block;
+  margin-right: 0.5rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 6px;
+  text-decoration: none;
+  background: var(--feature-title-color);
+  color: var(--bg-color);
   transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-form button:hover {
-  background: var(--contact-btn-hover);
-  transform: scale(1.03);
+#contact .contact-info a:hover {
+  background: var(--feature-title-hover);
+  transform: scale(1.05);
 }
 
-/* =========================
-   COLOR SCHEME VARIABLES
-   ========================= */
-
-/* Light Mode */
-.light-mode #contact {
-  --contact-bg: #ffffff;
-  --contact-border: #e6e6e6;
-  --contact-title: #1565c0;
-
-  --contact-input-bg: rgba(100, 181, 246, 0.05);
-  --contact-input-border: rgba(100, 181, 246, 0.25);
-  --contact-input-color: #000;
-  --contact-placeholder: #666;
-  --contact-input-focus: #1565c0;
-  --contact-input-focus-shadow: rgba(21, 101, 192, 0.4);
-
-  --contact-btn-bg: #1565c0;
-  --contact-btn-color: #fff;
-  --contact-btn-hover: #0d47a1;
+/* Hotline Box */
+.hotline-box {
+  max-width: 480px;
+  margin: auto;
+  padding: 1rem;
+  border: 1px solid var(--feature-title-color);
+  border-radius: 12px;
+  background-color: var(--bg-color);
+  color: var(--feature-text);
 }
 
-/* Dark Mode */
-:root {
-  --contact-bg: #121212;
-  --contact-border: #2a2a2a;
-  --contact-title: #f0c674;
+.hotline-box h3 {
+  margin-bottom: 1rem;
+  font-weight: bold;
+  color: var(--feature-title-color);
+}
 
-  --contact-input-bg: rgba(240, 198, 116, 0.05);
-  --contact-input-border: rgba(240, 198, 116, 0.25);
-  --contact-input-color: #fff;
-  --contact-placeholder: #aaa;
-  --contact-input-focus: #f0c674;
-  --contact-input-focus-shadow: rgba(240, 198, 116, 0.4);
+.hotline-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
 
-  --contact-btn-bg: #f0c674;
-  --contact-btn-color: #232323;
-  --contact-btn-hover: #d6ac4c;
+.hotline-row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.hotline-row .label {
+  min-width: 60px;
+}
+
+.hotline-row .number {
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  background-color: var(--feature-title-color);
+  color: var(--bg-color);
+}
+
+/* Email Box */
+.email-box {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  max-width: 480px;
+  margin: 1rem auto;
+  padding: 0.8rem 1rem;
+  border: 1px solid var(--feature-title-color);
+  border-radius: 12px;
+  background: var(--bg-color);
+  box-shadow: 0 4px 10px rgba(0,0,0,0.4);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.email-box:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 15px rgba(0,0,0,0.5);
+}
+
+.email-icon {
+  font-size: 1.8rem;
+  padding: 0.5rem;
+  border-radius: 50%;
+  background: var(--feature-title-color);
+  box-shadow: 0 2px 5px rgba(0,0,0,0.3);
+}
+
+.email-text {
+  font-size: 1rem;
+  line-height: 1.4;
+  color: var(--feature-text);
+}
+
+.email-text a {
+  font-weight: bold;
+  color: var(--feature-title-color);
+  text-decoration: none;
+}
+
+.email-text a:hover {
+  text-decoration: underline;
 }

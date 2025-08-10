@@ -1,79 +1,85 @@
 /* ===============================
-   VARIABLES (Dark Mode)
+   THEME VARIABLES
    =============================== */
+
+/* Dark Mode (Default) */
 :root {
-  --bg-color: #0f0f0f; /* deep charcoal background */
+  /* Base Colors */
+  --bg-color: #0f0f0f;
   --text-color: #f8f9fa;
 
-  /* Carousel */
-  --carousel-bg: rgba(20, 20, 20, 0.8);
-  --btn-bg: #f0c674; /* gold buttons */
+  /* Buttons */
+  --btn-bg: #f0c674;
   --btn-text: #0f0f0f;
-  --btn-hover: #ffd98e; /* lighter gold on hover */
-  --dot-inactive: #555;
-  --dot-active: #f0c674;
+  --btn-hover: #ffd98e;
 
-  /* Features */
-  --feature-border: rgba(240, 198, 116, 0.25);
-  --feature-title-bg: rgba(240, 198, 116, 0.12);
-  --feature-title-border: rgba(240, 198, 116, 0.25);
-  --feature-title-color: #f0c674;
-  --feature-title-hover: rgba(240, 198, 116, 0.2);
-  --feature-desc-bg: rgba(27, 27, 27, 0.5);
-  --feature-desc-border: rgba(240, 198, 116, 0.4);
-  --feature-text: #f8f9fa;
+  /* Panels */
+  --panel-bg: rgba(27, 27, 27, 0.6);
+  --panel-border: rgba(240, 198, 116, 0.25);
+  --panel-shadow: rgba(240, 198, 116, 0.15);
 
-  /* About Section Colors */
-  --about-bg: rgba(27, 27, 27, 0.6);
-  --about-border: rgba(240, 198, 116, 0.25);
-  --about-title: #f0c674;
-  --about-title-shadow: rgba(240, 198, 116, 0.15);
-  --about-text: #f8f9fa;
-  --about-highlight: #f0c674;
+  /* Titles */
+  --title-color: #f0c674;
+  --title-shadow: rgba(240, 198, 116, 0.15);
 
-  /* Section-specific */
-  --section-bg: rgba(27, 27, 27, 0.9);
-  --section-border: rgba(240, 198, 116, 0.2);
+  /* Camera / Monitor */
+  --monitor-bg: rgba(27, 27, 27, 0.6);
+  --monitor-text: #f8f9fa;
+  --monitor-border: rgba(240, 198, 116, 0.25);
+  --monitor-title: #f0c674;
+  --monitor-title-shadow: rgba(240, 198, 116, 0.15);
+  --monitor-video-bg: rgba(240, 198, 116, 0.05);
+  --monitor-video-border: rgba(240, 198, 116, 0.25);
+  --monitor-video-shadow: rgba(240, 198, 116, 0.08);
+  --monitor-video-shadow-hover: rgba(240, 198, 116, 0.15);
+
+  /* Camera Section */
+  --camera-bg: rgba(240, 198, 116, 0.05);
+  --camera-border: rgba(240, 198, 116, 0.25);
+  --camera-shadow: rgba(240, 198, 116, 0.08);
+  --camera-shadow-hover: rgba(240, 198, 116, 0.15);
 }
 
-/* Light Mode Variables Override */
+/* Light Mode Override */
 .light-mode {
   --bg-color: linear-gradient(180deg, #e3f7ff 0%, #f5faff 100%);
   --text-color: #002b36;
 
   --btn-bg: #00AEEF;
-  --btn-text: #ffffff;
+  --btn-text: #fff;
   --btn-hover: #33cfff;
 
-  --feature-border: rgba(0, 174, 239, 0.2);
-  --feature-title-bg: rgba(0, 174, 239, 0.08);
-  --feature-title-border: rgba(0, 174, 239, 0.2);
-  --feature-title-color: #00AEEF;
-  --feature-title-hover: rgba(0, 174, 239, 0.12);
-  --feature-desc-bg: rgba(255, 255, 255, 0.6);
-  --feature-desc-border: rgba(0, 174, 239, 0.25);
-  --feature-text: #003547;
+  --panel-bg: rgba(100, 181, 246, 0.05);
+  --panel-border: rgba(0, 174, 239, 0.15);
+  --panel-shadow: rgba(0, 174, 239, 0.12);
 
-  --about-bg: rgba(255, 255, 255, 0.7);
-  --about-border: rgba(0, 174, 239, 0.25);
-  --about-title: #00AEEF;
-  --about-title-shadow: rgba(0, 174, 239, 0.15);
-  --about-text: #003547;
-  --about-highlight: #00AEEF;
+  --title-color: #1565c0;
+  --title-shadow: rgba(21, 101, 192, 0.15);
 
-  --section-bg: rgba(255, 255, 255, 0.9);
-  --section-border: rgba(0, 174, 239, 0.15);
+  --monitor-bg: rgba(100, 181, 246, 0.05);
+  --monitor-text: #1a1a1a;
+  --monitor-border: rgba(0, 174, 239, 0.15);
+  --monitor-title: #1565c0;
+  --monitor-title-shadow: rgba(21, 101, 192, 0.15);
+  --monitor-video-bg: rgba(100, 181, 246, 0.05);
+  --monitor-video-border: rgba(100, 181, 246, 0.25);
+  --monitor-video-shadow: rgba(0, 174, 239, 0.12);
+  --monitor-video-shadow-hover: rgba(0, 174, 239, 0.2);
+
+  --camera-bg: rgba(100, 181, 246, 0.05);
+  --camera-border: rgba(100, 181, 246, 0.25);
+  --camera-shadow: rgba(0, 174, 239, 0.12);
+  --camera-shadow-hover: rgba(0, 174, 239, 0.2);
 }
 
 /* ===============================
-   RESET & BASE
+   BASE RESET
    =============================== */
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
   font-family: 'Segoe UI', Roboto, sans-serif;
-  scroll-behavior: smooth;
 }
 
 body {
@@ -82,22 +88,49 @@ body {
   line-height: 1.6;
   font-size: 16px;
   overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
 @media (max-width: 768px) {
-  body {
-    font-size: 14px;
-  }
+  body { font-size: 14px; }
 }
 
 /* ===============================
-   CONTAINER (MOBILE MAX WIDTH)
+   HEADER
    =============================== */
-.container {
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
   max-width: 480px;
   margin: 0 auto;
-  padding: 1rem;
+  background-color: var(--panel-bg);
+  backdrop-filter: blur(8px);
+  border: 1px solid var(--panel-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--panel-shadow);
 }
+
+.site-header h1 {
+  font-size: 1.4rem;
+  font-weight: bold;
+  color: var(--title-color);
+  text-shadow: 0 2px 6px var(--title-shadow);
+}
+
+.site-nav a {
+  color: var(--title-color);
+  margin-left: 1rem;
+  text-decoration: none;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.site-nav a:hover { color: var(--btn-hover); }
 
 /* ===============================
    MODE TOGGLE BUTTON
@@ -114,106 +147,123 @@ body {
   padding: 0.6rem 1.3rem;
   font-size: 0.94rem;
   font-weight: 600;
-  box-shadow: 0 2px 12px rgba(240, 198, 116, 0.3);
+  box-shadow: 0 4px 12px var(--panel-shadow);
   cursor: pointer;
-  transition: background 0.3s, color 0.3s, transform 0.2s;
+  transition: background 0.3s ease, transform 0.2s ease;
 }
 
-.mode-toggle:hover,
-.mode-toggle:focus {
+.mode-toggle:hover {
   background: var(--btn-hover);
-  color: var(--btn-text);
-  outline: 2px solid var(--btn-bg);
   transform: translateY(-2px);
 }
 
-/* ===============================
-   HEADER & NAV
-   =============================== */
-.site-header {
-  position: sticky;
-  top: 0;
-  z-index: 1000;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 1rem;
-  background-color: rgba(15, 15, 15, 0.85);
-  backdrop-filter: blur(8px);
-  border-bottom: 1px solid var(--feature-border);
-}
-
-.site-header h1 {
-  font-size: 1.6rem;
-  font-weight: bold;
-  color: var(--feature-title-color);
-}
-
-.site-nav a {
-  color: var(--feature-title-color);
-  margin-left: 1rem;
-  text-decoration: none;
-  font-weight: 600;
-  transition: color 0.3s;
-}
-
-.site-nav a:hover {
-  color: var(--btn-hover);
-}
-
-/* ===============================
-   SECTION TITLE
-   =============================== */
-.section-title {
-  font-size: 2rem;
-  font-weight: 700;
-  text-align: left;
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
-  line-height: 1.3;
-  color: var(--feature-title-color);
-  text-shadow: 0 2px 6px var(--about-title-shadow);
-}
-
-/* ===============================
-   CAMERA & SENSORS SECTION
-   =============================== */
-#camera-section,
-#sensors-section {
-  background: var(--section-bg);
-  border: 1px solid var(--section-border);
+/* =========================
+   LIVE FEED - LANDSCAPE FORMAT
+   ========================= */
+#live-feed {
+  width: 100%;
+  max-width: 640px; /* Wider than the demo section for landscape feel */
+  height: 360px; /* Standard landscape height */
+  aspect-ratio: 16 / 9; /* Enforce landscape shape */
+  margin: 1rem auto;
   border-radius: 12px;
-  padding: 1rem;
-  margin-bottom: 1.5rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+  overflow: hidden;
+  background: var(--live-feed-bg);
+  box-shadow: 0 4px 12px var(--live-feed-shadow);
+}
+
+#live-feed img,
+#live-feed video {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Crop to fit without distortion */
+  display: block;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+#live-feed img:hover,
+#live-feed video:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px var(--live-feed-shadow-hover);
+}
+
+/* =========================
+   COLOR VARIABLES
+   ========================= */
+:root {
+  --live-feed-bg: rgba(240, 198, 116, 0.05);
+  --live-feed-shadow: rgba(240, 198, 116, 0.08);
+  --live-feed-shadow-hover: rgba(240, 198, 116, 0.15);
+}
+
+.light-mode {
+  --live-feed-bg: rgba(100, 181, 246, 0.05);
+  --live-feed-shadow: rgba(0, 174, 239, 0.12);
+  --live-feed-shadow-hover: rgba(0, 174, 239, 0.2);
+}
+
+/* ===============================
+   CAMERA SECTION
+   =============================== */
+.hero {
+  text-align: center;
+  max-width: 480px;
+  margin: 1rem auto;
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: var(--panel-bg);
+  color: var(--text-color);
+  box-shadow: 0 4px 12px var(--panel-shadow);
+  border: 1px solid var(--panel-border);
+  animation: fadeIn 0.6s ease-out;
+}
+
+.robotic-title {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: var(--title-color);
+  text-shadow: 0 2px 6px var(--title-shadow);
+  margin-bottom: 1rem;
 }
 
 .camera-feed {
-  background: #000;
-  border-radius: 8px;
-  height: 220px;
-  display: flex;
-  justify-content: center;
-  align-items: center;  
-  color: #ccc;
-  font-size: 0.9rem;
+  background: var(--camera-bg);
+  border: 1px solid var(--camera-border);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px var(--camera-shadow);
+  padding: 0.5rem;
 }
 
-.sensor-list {
-  display: grid;
-  gap: 0.8rem;
+.camera-feed img {
+  width: 100%;
+  display: block;
+  border-radius: 10px;
+  border: 1px solid var(--camera-border);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.sensor-card {
-  background: var(--feature-desc-bg);
-  border: 1px solid var(--feature-desc-border);
-  border-radius: 8px;
-  padding: 0.8rem;
-  color: var(--feature-text);
-  transition: background 0.3s, transform 0.2s;
+.camera-feed img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 6px 16px var(--camera-shadow-hover);
 }
 
-.sensor-card:hover {
-  background: var(--feature-title-hover);
-  transform: translateY(-1px);
+/* ===============================
+   FOOTER
+   =============================== */
+.site-footer {
+  text-align: center;
+  max-width: 480px;
+  margin: 1rem auto;
+  padding: 1rem;
+  border-radius: 12px;
+  background-color: var(--panel-bg);
+  border: 1px solid var(--panel-border);
+  box-shadow: 0 4px 12px var(--panel-shadow);
+  font-size: 0.85rem;
 }
+
+/* ===============================
+   ANIMATIONS
+   =============================== */
+@keyframes fadeIn { from {opacity: 0;} to {opacity: 1;} }
+@keyframes blink { 50% {opacity: 0.4;} }

@@ -7,6 +7,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>SalbaKita</title>
   <!-- Main and section CSS files -->
+   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" />
+
   <link rel="stylesheet" href="style.css" />
   <link rel="stylesheet" href="/styles/section-title.css" />
   <link rel="stylesheet" href="/styles/home-section.css" />
@@ -97,7 +99,7 @@
                 </p>
               </div>
               <div class="desc-image">
-                <img src="assets/images/buoy.png" alt="Buoy System">
+                <img src="assets/images/buoy1.png" alt="Buoy System">
               </div>
             </div>
           </li>
@@ -183,49 +185,200 @@
       <p class="desc-text">
         Watch SalbaKita in action as it performs water-rescue and cleanup operations.
       </p>
-      <video src="assets/videos/salba_robo.mp4" controls style="width:100%;max-width:600px;display:block;margin:2rem auto;"></video>
+
+      <!-- Trailer Video -->
+      <video src="assets/videos/salba_trailer.mp4" controls></video>
+      <p class="video-caption">
+        Official SalbaKita Trailer – A glimpse into our mission to save lives and protect aquatic ecosystems.
+      </p>
+
+      <!-- Main Demo Video -->
+      <video src="assets/videos/salba_robo.mp4" controls></video>
+      <p class="video-caption">
+        SalbaKita in action – Demonstrating real-time water rescue and environmental cleanup.
+      </p>
     </section>
 
     <!-- Technical Details Section -->
     <section id="technical_details">
       <h2 class="section-title">Technical Details</h2>
       <div class="neon-list">
+
+        <!-- Power System -->
+      <div class="tech-item">
+        <div class="tech-header">
+          Power System
+          <span class="arrow">▶</span>
+        </div>
+        <div class="tech-desc">
+          SalbaKita is equipped with a powerful and sustainable <strong>hybrid energy system</strong> that ensures continuous operation during critical situations:
+          <ul>
+            <li><strong>8 Solar Panels</strong> – Harness clean, renewable energy from sunlight for daytime charging and operations.</li>
+            <li><strong>8 Rechargeable Batteries</strong> – Each rated at <strong>8.4V/1800mAh</strong>, providing robust backup power during low-light conditions.</li>
+            <li><strong>Hydrogen-Based Fuel Cell</strong> – Enhances energy efficiency and extends runtime for high-demand scenarios.</li>
+            <li><strong>Smart Phototransistor Sensors</strong> – Automatically switch between day and night modes, optimizing energy consumption based on environmental light.</li>
+            <li><strong>Average Runtime:</strong> <span style="color: #e63946;"><strong>Up to 8 Hours</strong></span> of uninterrupted performance — ideal for extended rescue or monitoring missions.</li>
+          </ul>
+        </div>
+      </div>
+
+        <!-- Components & Build -->
+        <div class="tech-item">
+          <div class="tech-header">
+            Components & Build
+            <span class="arrow">▶</span>
+          </div>
+          <div class="tech-desc">
+            <ul>
+              <li><strong>Structural Frame:</strong> Bamboo (Bayog), wood, PET bottles for enhanced buoyancy</li>
+              <li><strong>Reinforcement:</strong> Square tube aluminum (12 ft), stainless steel bowls</li>
+              <li><strong>Protection:</strong> Laminating film (PET+EVA) for battery insulation and waterproofing (IP65)</li>
+              <li><strong>Motion:</strong> 4 x 12V motors driving propellers with speed up to 0.016 m/s</li>
+              <li><strong>Connectivity:</strong> TXT 4.0 Controllers (master + extension) + FT App</li>
+              <li><strong>Controller Range:</strong> 50.5m (unobstructed), 47.35m (obstructed)</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Sensor & Navigation Suite -->
+        <div class="tech-item">
+          <div class="tech-header">
+            Sensor & Navigation Suite
+            <span class="arrow">▶</span>
+          </div>
+          <div class="tech-desc">
+            <ul>
+              <li><strong>Ultrasonic Sensors:</strong> Detect objects and initiate auto-approach behavior</li>
+              <li><strong>Phototransistor:</strong> Switches operation between Day/Night with auto-light control</li>
+              <li><strong>GPS Module:</strong> Provides accurate location tracking up to 120m Bluetooth range</li>
+              <li><strong>Motion Detection:</strong> Alarm triggers when motion is detected via sensor and lever</li>
+              <li><strong>LEDs:</strong> 6 white LEDs ensure high visibility in nighttime rescues</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Performance Tests -->
+        <div class="tech-item">
+          <div class="tech-header">
+            Performance Metrics
+            <span class="arrow">▶</span>
+          </div>
+          <div class="tech-desc">
+            <ul>
+              <li><strong>Average Rescue Response Time:</strong> 3:13 – 4:28 mins for 4 meters distance</li>
+              <li><strong>Waste Collection (Manual):</strong> Up to 5 kg in ~5.5 mins; average 4 kg in 3.5 mins</li>
+              <li><strong>Waste Collection (Auto):</strong> Up to 5 kg, fully autonomous, lever-triggered</li>
+              <li><strong>Carrying Capacity:</strong> Up to 60 kg (tested with 35–60 kg loads)</li>
+              <li><strong>Speed with Load:</strong> 0.013 – 0.016 m/s across 1 meter distance</li>
+            </ul>
+          </div>
+        </div>
+
+        <!-- Buoyancy System -->
+        <div class="tech-item">
+          <div class="tech-header">
+            Buoyancy & Stability
+            <span class="arrow">▶</span>
+          </div>
+          <div class="tech-desc">
+            Based on Archimedes’ Principle, Salbakita maintains <strong>positive buoyancy</strong> in seawater, rivers, and lakes. It displaces ~62.58 m³ of water and weighs only 25 kg, resulting in a buoyant force of up to <strong>627,757 N</strong>, allowing it to float and move even in strong currents.
+          </div>
+        </div>
+
+        <!-- Camera System -->
+        <div class="tech-item">
+          <div class="tech-header">
+            Camera System
+            <span class="arrow">▶</span>
+          </div>
+          <div class="tech-desc">
+            The onboard 1MP camera rotates 360° via encoder motor and provides clear visibility up to 4 meters. It enables real-time surveillance, obstacle identification, and water condition monitoring. The LED remains constantly lit at night to assist visual feed.
+          </div>
+        </div>
+
+        <!-- Sustainable Design -->
+        <div class="tech-item">
+          <div class="tech-header">
+            Sustainable Design
+            <span class="arrow">▶</span>
+          </div>
+          <div class="tech-desc">
+            Built using locally-sourced bamboo, recycled PET bottles, and wood, Salbakita supports sustainable development. It contributes to SDGs 7, 9, 11, 13, 14, and 15 by promoting clean energy, responsible production, and protection of life on land and underwater.
+          </div>
+        </div>
+
+        <!-- Field Testing -->
+        <div class="tech-item">
+          <div class="tech-header">
+            Field Testing & Trials
+            <span class="arrow">▶</span>
+          </div>
+          <div class="tech-desc">
+            Extensively tested in various water conditions including Malabrigo Beach, Marinig Lake, Kastilyong Bato River, and Labas SHS pool. Trials confirmed consistent buoyancy, propulsion, and functionality across calm, high-current, and obstacle-laden environments.
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+<!-- Contact Us! Section -->
+    <section id="contact" class="fade-in glassy-panel">
+      <h2 class="section-title">Contact Us!</h2>
+      <div class="email-box">
+        <span class="email-icon">📧</span>
+        <span class="email-text">
+          Send us a mail:<br>
+          <a href="mailto:salbakita@gmail.com">salbakita@gmail.com</a>
+        </span>
+      </div>
+
+      <p class="desc-text">
+        <strong>For emergencies, please use the following hotlines:</strong>
+      </p>
+
+      <div class="contact-info neon-list">
         <ul>
-          <li class="tech-item">
-            <div class="tech-header">
-              <span class="tech-title">Feature 1 Title</span>
-              <span class="arrow">&#9654;</span>
-            </div>
-            <div class="tech-desc">
-              Placeholder description for feature 1. This will expand on click.
-            </div>
+          <!-- Santa Rosa MDRRMO -->
+          <li><strong>Santa Rosa MDRRMO:</strong>
+            <a href="tel:+639989676004">0998 967 6004</a>
           </li>
 
-          <li class="tech-item">
-            <div class="tech-header">
-              <span class="tech-title">Feature 2 Title</span>
-              <span class="arrow">&#9654;</span>
-            </div>
-            <div class="tech-desc">
-              Placeholder description for feature 2.
-            </div>
+          <!-- Santa Rosa Police Station -->
+          <li><strong>Santa Rosa Police Station:</strong>
+            <a href="tel:+639262695602">0926 269 5602</a>
+            <a href="tel:+639985985432">0998 598 5432</a>
           </li>
 
-          <!-- Repeat up to Feature 8 -->
+          <!-- Santa Rosa BFP -->
+          <li><strong>Santa Rosa BFP:</strong>
+            <a href="tel:+639958746877">0995 874 6877</a>
+            <a href="tel:+639435957710">0943 595 7710</a>
+          </li>
+
+          <!-- MDRRMC -->
+          <li><strong>Municipal Disaster Reduction and Risk Management Council (MDRRMC):</strong>
+            <a href="tel:+639163164974">0916 3164 974</a>
+            <a href="tel:+639156444338">0915 6444 338</a>
+          </li>
+
+          <!-- Santa Rosa Bayan Emergency -->
+        <div class="hotline-box">
+          <h3>Santa Rosa Bayan – Emergency Hotline (Calls Only):</h3>
+          <div class="hotline-grid">
+            <div class="hotline-row">
+              <span class="label">Globe:</span>
+              <span class="number">0995 650 1943</span>
+            </div>
+            <div class="hotline-row">
+              <span class="label">Smart:</span>
+              <span class="number">0999 873 5431</span>
+            </div>
+          </div>
+        </div>
         </ul>
       </div>
     </section>
 
-    <!-- Contact Section: Contact form -->
-    <section id="contact" class="section fade-in glassy-panel">
-      <h2 class="section-title">Contact</h2>
-      <form id="contactForm">
-        <input type="text" placeholder="Name" required />
-        <input type="email" placeholder="Email" required />
-        <textarea placeholder="Message" required></textarea>
-        <button type="submit" class="btn-glow">Send</button>
-      </form>
-    </section>
   </main>
 
   <!-- Site footer -->
@@ -235,87 +388,6 @@
 
   <!-- Main JavaScript file -->
   <script src="script.js"></script>
-
-  <!-- Mode toggle script: switches between light and dark mode -->
-  <script>
-    const modeToggle = document.getElementById('modeToggle');
-    const root = document.documentElement;
-    modeToggle.addEventListener('click', function() {
-      if (root.classList.contains('light-mode')) {
-        root.classList.remove('light-mode');
-        modeToggle.textContent = 'Light Mode';
-      } else {
-        root.classList.add('light-mode');
-        modeToggle.textContent = 'Dark Mode';
-      }
-    });
-  </script>
-
-  <!-- Expand/collapse summary section -->
-  <script>
-    const summaryHead = document.querySelector('.summary-head');
-    const summaryText = document.querySelector('.summary-text');
-
-    summaryHead.addEventListener('click', () => {
-      summaryText.classList.toggle('expanded');
-      summaryHead.classList.toggle('active'); // toggles arrow direction
-    });
-  </script>
-
-  <!-- Expand/collapse feature descriptions -->
-  <script>
-    document.querySelectorAll('.feature-title').forEach(title => {
-      title.addEventListener('click', () => {
-        const item = title.parentElement;
-        item.classList.toggle('expanded');
-      });
-    });
-  </script>
-
-  <!-- Carousel navigation logic for brochure pages -->
-  <script>
-    const carousel = document.getElementById('pageCarousel');
-    const dots = document.querySelectorAll('.page-dots .dot');
-    const totalPages = carousel.children.length;
-    let currentIndex = 0;
-
-    function updateCarousel(index) {
-      // Wrap around if index is out of bounds
-      if (index < 0) {
-        index = totalPages - 1;
-      } else if (index >= totalPages) {
-        index = 0;
-      }
-
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-
-      dots.forEach(dot => dot.classList.remove('active'));
-      dots[index].classList.add('active');
-
-      currentIndex = index;
-    }
-
-    function scrollPages(direction) {
-      updateCarousel(currentIndex + direction);
-    }
-
-    dots.forEach((dot, index) => {
-      dot.addEventListener('click', () => updateCarousel(index));
-    });
-  </script>
-    <!-- Initial mode toggle script (adds/removes light-mode class) -->
-  <script>
-    const modeToggleBtn = document.getElementById('modeToggle');
-    function updateModeToggleClass() {
-      if (document.documentElement.classList.contains('light-mode')) {
-        modeToggleBtn.classList.add('light-mode');
-      } else {
-        modeToggleBtn.classList.remove('light-mode');
-      }
-    }
-    modeToggleBtn.addEventListener('click', updateModeToggleClass);
-    updateModeToggleClass();
-  </script>
 
 </body>
 </html>

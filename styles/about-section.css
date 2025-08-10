@@ -110,7 +110,7 @@
 /* =========================
    SUMMARY HEADER
    ========================= */
-.summary-head {
+.summary-head, .key-features {
   font-size: 1.6rem;
   display: flex;
   align-items: center;
@@ -126,7 +126,7 @@
   color: var(--feature-title-color);
 }
 
-.summary-head::after {
+.summary-head::after, .key-features::after {
   content: "";
   position: absolute;
   left: 1rem;
@@ -137,11 +137,11 @@
   transition: width 0.3s ease;
 }
 
-.summary-head:hover::after {
+.summary-head:hover::after, .key-features:hover::after {
   width: calc(100% - 2rem);
 }
 
-.summary-head:hover {
+.summary-head:hover, .key-features:hover {
   box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
 }
 
@@ -201,7 +201,6 @@
 .page-btn {
   position: absolute;
   top: 50%;
-  transform: translateY(-50%);
   border: none;
   font-size: 1.5rem;
   padding: 0.4rem 0.8rem;
@@ -210,12 +209,14 @@
   border-radius: 6px;
   background: var(--btn-bg);
   color: var(--btn-text);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease;
+  opacity: .5;
 }
 
 .page-btn:hover {
   background: var(--btn-hover);
   transform: scale(1.05);
+  opacity: .8;
 }
 
 .page-btn.left { left: 8px; }
@@ -266,17 +267,39 @@
   background: var(--feature-title-bg);
   border: 1px solid var(--feature-title-border);
   color: var(--feature-title-color);
-  transition: background-color 0.3s ease, transform 0.2s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, border-bottom-left-radius 0.6s ease, border-bottom-right-radius 0.6s ease;
 }
 
+/* Remove bottom border-radius of the toggle title when expanded */
+.feature-item.expanded .feature-title {
+  border-bottom-left-radius: 0;
+  border-bottom-right-radius: 0;
+}
+
+.feature-item::marker{
+  color: var(--feature-title-color);
+}
 .feature-title:hover {
   background-color: var(--feature-title-hover);
-  transform: translateX(3px);
 }
+.feature-title .arrow {
+  rotate: -90deg;
+  transition: transform 0.3s ease;
+  font-size: 1.1rem;
+}
+
+/* Add arrow icon styling inside .feature-title */
+
+/* Rotate arrow when item is expanded */
+.feature-item.expanded .feature-title .arrow {
+  transform: rotate(90deg);
+}
+
 
 .feature-description {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 1rem;
   flex-wrap: wrap;
   max-height: 0;
@@ -296,7 +319,7 @@
 }
 
 .feature-description img {
-  max-width: 160px;
+  max-width: 320px;
   width: 100%;
   object-fit: contain;
   border-radius: 6px;

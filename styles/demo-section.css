@@ -1,35 +1,47 @@
-/* ===================
-   DEMO SECTION STYLES
-   =================== */
+/* =========================
+   DEMO SECTION - ENHANCED
+   ========================= */
 #demo {
   text-align: center;
-  padding: 2rem;
-  background: var(--demo-bg);
-  border-radius: 16px;
-  max-width: 480px; /* Match other sections' width */
+  max-width: 480px;
   margin: 0 auto;
-  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
-  border: 1px solid var(--demo-border);
+  padding: 1.5rem;
+  border-radius: 16px;
+  background-color: var(--demo-bg);
+  color: var(--demo-text);
+  box-shadow: 0 4px 12px var(--demo-border);
   transition: background-color 0.4s ease, color 0.4s ease;
-  margin-bottom: 1rem; /* Add space below the section */
+  animation: fadeIn 0.6s ease-out;
   margin-top: 1rem;
+  margin-bottom: 1rem;
 }
 
-/* Section title */
 #demo .section-title {
-  font-size: 2.2rem;
+  font-size: 2rem;
   font-weight: 700;
   color: var(--demo-title);
-  text-shadow: 0 2px 8px rgba(255, 214, 0, 0.15);
-  margin-bottom: 1.5rem;
+  text-shadow: 0 2px 6px var(--demo-title-shadow);
+  margin-bottom: 1rem;
+  text-align: left;
+  padding-left: 0.5rem;
 }
 
-/* Video wrapper */
+#demo p {
+  color: var(--demo-text);
+  line-height: 1.6;
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+#demo p strong {
+  color: var(--demo-highlight);
+}
+
 #demo video {
   width: 100%;
-  max-width: 480px; /* Restrict video width */
+  max-width: 480px;
   display: block;
-  margin: 2rem auto;
+  margin: 1.5rem auto;
   border-radius: 12px;
   box-shadow: 0 4px 12px var(--demo-video-shadow);
   border: 1px solid var(--demo-video-border);
@@ -37,7 +49,6 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-/* Hover effect */
 #demo video:hover {
   transform: scale(1.02);
   box-shadow: 0 6px 16px var(--demo-video-shadow-hover);
@@ -49,22 +60,39 @@
 
 /* Light Mode */
 .light-mode #demo {
-  --demo-bg: #ffffff;
-  --demo-border: #e6e6e6;
+  --demo-bg: rgba(100, 181, 246, 0.05);
+  --demo-text: #1a1a1a;
+  --demo-border: rgba(0, 174, 239, 0.15);
   --demo-title: #1565c0;
+  --demo-title-shadow: rgba(21, 101, 192, 0.15);
+  --demo-highlight: #1565c0;
   --demo-video-bg: rgba(100, 181, 246, 0.05);
   --demo-video-border: rgba(100, 181, 246, 0.25);
   --demo-video-shadow: rgba(0, 174, 239, 0.12);
   --demo-video-shadow-hover: rgba(0, 174, 239, 0.2);
 }
 
-/* Dark Mode */
+/* Dark Mode (Default) */
 :root {
-  --demo-bg: #121212;
-  --demo-border: #2a2a2a;
+  --demo-bg: rgba(27, 27, 27, 0.6);
+  --demo-text: #f8f9fa;
+  --demo-border: rgba(240, 198, 116, 0.25);
   --demo-title: #f0c674;
+  --demo-title-shadow: rgba(240, 198, 116, 0.15);
+  --demo-highlight: #f0c674;
   --demo-video-bg: rgba(240, 198, 116, 0.05);
   --demo-video-border: rgba(240, 198, 116, 0.25);
   --demo-video-shadow: rgba(240, 198, 116, 0.08);
   --demo-video-shadow-hover: rgba(240, 198, 116, 0.15);
+}
+
+/* Video Captions */
+#demo .video-caption {
+  font-style: italic;
+  color: var(--demo-text);
+  margin: -0.5rem auto 1.5rem auto;
+  max-width: 460px;
+  padding-left: 1rem; /* Indentation */
+  text-align: left;
+  line-height: 1.4;
 }
